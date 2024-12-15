@@ -1388,8 +1388,8 @@
         "z": "2c1eaf9dc12fdd42",
         "name": "",
         "events": "all",
-        "x": 720,
-        "y": 960,
+        "x": 620,
+        "y": 880,
         "wires": [
             []
         ]
@@ -1414,39 +1414,12 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 130,
-        "y": 960,
+        "x": 110,
+        "y": 880,
         "wires": [
             [
-                "7b53f60b46fe3712",
-                "d165c2bd98daab4c"
-            ]
-        ]
-    },
-    {
-        "id": "7b53f60b46fe3712",
-        "type": "change",
-        "z": "2c1eaf9dc12fdd42",
-        "name": "to sign up",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{\"tab\":\"Đăng ký\"}",
-                "tot": "json"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 440,
-        "y": 920,
-        "wires": [
-            [
-                "e63949d0d15fa8e4"
+                "d165c2bd98daab4c",
+                "e5555cc75dc7153e"
             ]
         ]
     },
@@ -1496,8 +1469,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 440,
-        "y": 1020,
+        "x": 380,
+        "y": 940,
         "wires": [
             [
                 "e63949d0d15fa8e4"
@@ -1722,6 +1695,33 @@
         "wires": [
             [
                 "56fba912855bf174"
+            ]
+        ]
+    },
+    {
+        "id": "e5555cc75dc7153e",
+        "type": "change",
+        "z": "2c1eaf9dc12fdd42",
+        "name": "to sign up",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"tab\":\"Đăng ký\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 380,
+        "y": 840,
+        "wires": [
+            [
+                "e63949d0d15fa8e4"
             ]
         ]
     },
