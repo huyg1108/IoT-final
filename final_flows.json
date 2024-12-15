@@ -1,0 +1,2333 @@
+[
+    {
+        "id": "0990983ab5514abd",
+        "type": "tab",
+        "label": "Sign up",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "2c1eaf9dc12fdd42",
+        "type": "tab",
+        "label": "Sign in",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "c8bb26584d882317",
+        "type": "tab",
+        "label": "Slider flow",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "10c96a1878fec2c8",
+        "type": "tab",
+        "label": "Door flow",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "dbf42c02c6ce17b1",
+        "type": "tab",
+        "label": "Security flow",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "bb666dd7374de278",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "44aaf43923752d7c",
+        "type": "ui_tab",
+        "name": "Trang chủ",
+        "icon": "dashboard",
+        "order": 3,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "8258f05833dc3e66",
+        "type": "mongodb3",
+        "uri": "mongodb+srv://iot-door:iot-door-pass@cluster0.zi5ou.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
+        "name": "",
+        "options": "",
+        "parallelism": "-1"
+    },
+    {
+        "id": "377cc0cd3327d171",
+        "type": "ui_group",
+        "name": "Config",
+        "tab": "44aaf43923752d7c",
+        "order": 1,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "05f621574fa472ae",
+        "type": "ui_tab",
+        "name": "Thông tin ra vào nhà",
+        "icon": "dashboard",
+        "order": 4,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "589b625cad6c9ba0",
+        "type": "ui_group",
+        "name": "Table",
+        "tab": "05f621574fa472ae",
+        "order": 1,
+        "disp": true,
+        "width": 25,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "bddf7e598d8c044e",
+        "type": "ui_tab",
+        "name": "Thông tin báo động",
+        "icon": "dashboard",
+        "order": 5,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "e49c6940389da961",
+        "type": "ui_group",
+        "name": "Table",
+        "tab": "bddf7e598d8c044e",
+        "order": 1,
+        "disp": true,
+        "width": "25",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "dab33a2dbe1780c4",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "broker.hivemq.com",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "68b2c20de5da7e3f",
+        "type": "ui_tab",
+        "name": "Đăng ký",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "c83732a9bc7eb5fe",
+        "type": "ui_group",
+        "name": "Đăng ký",
+        "tab": "68b2c20de5da7e3f",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "a972a1d450bc07ed",
+        "type": "ui_tab",
+        "name": "Đăng nhập",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "aec9411f77430b30",
+        "type": "ui_group",
+        "name": "Đăng nhập",
+        "tab": "a972a1d450bc07ed",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "9a2c46dd5e33ca0d",
+        "type": "mongodb-aleph-config",
+        "hostname": "cluster0.zi5ou.mongodb.net",
+        "topology": "dnscluster",
+        "connectOptions": "",
+        "port": "27017",
+        "db": "test",
+        "name": "iot-door db"
+    },
+    {
+        "id": "754b63f6b4900b4f",
+        "type": "ui_form",
+        "z": "0990983ab5514abd",
+        "name": "Sign Up",
+        "label": "",
+        "group": "c83732a9bc7eb5fe",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "Tên đăng nhập",
+                "value": "username",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Mật khẩu",
+                "value": "pass",
+                "type": "password",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "username": "",
+            "pass": ""
+        },
+        "payload": "",
+        "submit": "Đăng ký",
+        "cancel": "",
+        "topic": "manual",
+        "topicType": "str",
+        "splitLayout": "",
+        "className": "",
+        "x": 100,
+        "y": 220,
+        "wires": [
+            [
+                "af4f21f30cf55d7c",
+                "a7e197e8f963b4e8"
+            ]
+        ]
+    },
+    {
+        "id": "0c0e625303709b7f",
+        "type": "function",
+        "z": "0990983ab5514abd",
+        "name": "hash password",
+        "func": "const bcrypt = global.get('bcryptjs');\n\nconst username = msg.payload.manual.payload.username;\nconst password = msg.payload.manual.payload.pass;\n\nconst saltRounds = 10;\ntry {\n    const hash = bcrypt.hashSync(password, saltRounds);\n\n    msg.payload = {\n        username: username,\n        password: hash\n    };\n\n    return msg;\n} catch (err) {\n    node.error(\"Lỗi khi mã hóa mật khẩu: \" + err);\n    return null;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 260,
+        "y": 320,
+        "wires": [
+            [
+                "39fa4c7f6b5e2864"
+            ]
+        ]
+    },
+    {
+        "id": "39fa4c7f6b5e2864",
+        "type": "mongodb3 in",
+        "z": "0990983ab5514abd",
+        "service": "_ext_",
+        "configNode": "8258f05833dc3e66",
+        "name": "user info",
+        "collection": "userInfo",
+        "operation": "insert",
+        "x": 440,
+        "y": 320,
+        "wires": [
+            [
+                "3803f0ab82f8bd0f"
+            ]
+        ]
+    },
+    {
+        "id": "0cc14d1e544f12b3",
+        "type": "mongodb-aleph-in",
+        "z": "0990983ab5514abd",
+        "mongodb": "9a2c46dd5e33ca0d",
+        "name": "find user db",
+        "collection": "userInfo",
+        "operation": "find",
+        "x": 450,
+        "y": 140,
+        "wires": [
+            [
+                "10a7fc99257fbd41"
+            ]
+        ]
+    },
+    {
+        "id": "af4f21f30cf55d7c",
+        "type": "function",
+        "z": "0990983ab5514abd",
+        "name": "find username",
+        "func": "msg.payload = { \"username\": msg.payload.username }\nreturn msg ",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 260,
+        "y": 140,
+        "wires": [
+            [
+                "0cc14d1e544f12b3"
+            ]
+        ]
+    },
+    {
+        "id": "10a7fc99257fbd41",
+        "type": "function",
+        "z": "0990983ab5514abd",
+        "name": "check user",
+        "func": "if (\n    (typeof msg.payload === 'object' && Object.keys(msg.payload).length === 0 && msg.payload.constructor === Object) || // đối tượng rỗng\n    (Array.isArray(msg.payload) && msg.payload.length === 0) || // mảng rỗng\n    (typeof msg.payload === 'string' && msg.payload.trim() === '') // chuỗi rỗng\n) {\n    msg.payload = { status: \"success\", message: \"Đăng ký thành công!\" };\n    msg.topic = \"success\"\n    return [null, msg];\n} else {\n    msg.payload = { status: \"error\", message: \"Dữ liệu đã có, không thể đăng ký.\" };\n    return [msg, null];\n}",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 140,
+        "wires": [
+            [
+                "9a85951ae42b505c"
+            ],
+            [
+                "a7e197e8f963b4e8"
+            ]
+        ]
+    },
+    {
+        "id": "cfd6d826f3405017",
+        "type": "ui_toast",
+        "z": "0990983ab5514abd",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "Đăng ký thất bại",
+        "name": "username exist",
+        "x": 860,
+        "y": 60,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9a85951ae42b505c",
+        "type": "change",
+        "z": "0990983ab5514abd",
+        "name": "noti",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Tên đăng nhập đã tồn tại",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 650,
+        "y": 60,
+        "wires": [
+            [
+                "cfd6d826f3405017"
+            ]
+        ]
+    },
+    {
+        "id": "3803f0ab82f8bd0f",
+        "type": "change",
+        "z": "0990983ab5514abd",
+        "name": "noti",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Bấm \"OK\" để tiếp tục",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 630,
+        "y": 320,
+        "wires": [
+            [
+                "f58e6b1e8760192a"
+            ]
+        ]
+    },
+    {
+        "id": "a7e197e8f963b4e8",
+        "type": "join",
+        "z": "0990983ab5514abd",
+        "name": "",
+        "mode": "custom",
+        "build": "object",
+        "property": "",
+        "propertyType": "full",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "useparts": false,
+        "accumulate": false,
+        "timeout": "",
+        "count": "2",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 370,
+        "y": 240,
+        "wires": [
+            [
+                "0c0e625303709b7f"
+            ]
+        ]
+    },
+    {
+        "id": "aedc1932b5bd2ff3",
+        "type": "change",
+        "z": "0990983ab5514abd",
+        "name": "hide sign in/up",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"tabs\":{\"enable\":[\"Trang chủ\",\"Thông tin ra vào nhà\",\"Thông tin báo động\"],\"disable\":[\"Đăng nhập\",\"Đăng ký\"],\"show\":[\"Trang chủ\",\"Thông tin ra vào nhà\",\"Thông tin báo động\"],\"hide\":[\"Đăng nhập\",\"Đăng ký\"]}}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 340,
+        "y": 980,
+        "wires": [
+            [
+                "3c32f04ee759b694"
+            ]
+        ]
+    },
+    {
+        "id": "8d21eda0a9f99277",
+        "type": "inject",
+        "z": "0990983ab5514abd",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 100,
+        "y": 980,
+        "wires": [
+            [
+                "aedc1932b5bd2ff3"
+            ]
+        ]
+    },
+    {
+        "id": "3c32f04ee759b694",
+        "type": "ui_ui_control",
+        "z": "0990983ab5514abd",
+        "name": "",
+        "events": "all",
+        "x": 600,
+        "y": 980,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "13acd336b167afad",
+        "type": "change",
+        "z": "0990983ab5514abd",
+        "name": "hide other tabs (for sign UP only)",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"tabs\":{\"disable\":[\"Đăng nhập\",\"Trang chủ\",\"Thông tin ra vào nhà\",\"Thông tin báo động\"],\"enable\":[\"Đăng ký\"],\"hide\":[\"Đăng nhập\",\"Trang chủ\",\"Thông tin ra vào nhà\",\"Thông tin báo động\"],\"show\":[\"Đăng ký\"]}}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 400,
+        "y": 660,
+        "wires": [
+            [
+                "756de667a312297c"
+            ]
+        ]
+    },
+    {
+        "id": "6defd6f4e3e01547",
+        "type": "inject",
+        "z": "0990983ab5514abd",
+        "name": "hide other tab",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 120,
+        "y": 660,
+        "wires": [
+            [
+                "13acd336b167afad"
+            ]
+        ]
+    },
+    {
+        "id": "756de667a312297c",
+        "type": "ui_ui_control",
+        "z": "0990983ab5514abd",
+        "name": "",
+        "events": "all",
+        "x": 660,
+        "y": 660,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d4b9b79e8dccd8d7",
+        "type": "inject",
+        "z": "0990983ab5514abd",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 720,
+        "wires": [
+            [
+                "13acd336b167afad"
+            ]
+        ]
+    },
+    {
+        "id": "3a0e86373e43d864",
+        "type": "change",
+        "z": "0990983ab5514abd",
+        "name": "hide other tabs (for sign IN only)",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"tabs\":{\"disable\":[\"Đăng ký\",\"Trang chủ\",\"Thông tin ra vào nhà\",\"Thông tin báo động\"],\"enable\":[\"Đăng nhập\"],\"hide\":[\"Đăng ký\",\"Trang chủ\",\"Thông tin ra vào nhà\",\"Thông tin báo động\"],\"show\":[\"Đăng nhập\"]}}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 430,
+        "y": 860,
+        "wires": [
+            [
+                "dbd5c459bcb3f87e"
+            ]
+        ]
+    },
+    {
+        "id": "dbd5c459bcb3f87e",
+        "type": "ui_ui_control",
+        "z": "0990983ab5514abd",
+        "name": "",
+        "events": "all",
+        "x": 660,
+        "y": 800,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cfa3a4d44148c92a",
+        "type": "ui_button",
+        "z": "0990983ab5514abd",
+        "name": "",
+        "group": "c83732a9bc7eb5fe",
+        "order": 0,
+        "width": "0",
+        "height": "0",
+        "passthru": false,
+        "label": "Đến đăng nhập",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "forward",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 100,
+        "y": 800,
+        "wires": [
+            [
+                "3a0e86373e43d864",
+                "60cc68d6d0e7c183"
+            ]
+        ]
+    },
+    {
+        "id": "60cc68d6d0e7c183",
+        "type": "change",
+        "z": "0990983ab5514abd",
+        "name": "to sign in",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"tab\":\"Đăng nhập\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 420,
+        "y": 760,
+        "wires": [
+            [
+                "dbd5c459bcb3f87e"
+            ]
+        ]
+    },
+    {
+        "id": "291a2b94d3bba97d",
+        "type": "ui_ui_control",
+        "z": "0990983ab5514abd",
+        "name": "",
+        "events": "change",
+        "x": 820,
+        "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cd97d011df06bc14",
+        "type": "change",
+        "z": "0990983ab5514abd",
+        "name": "hide sign in/up",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"tabs\":{\"enable\":[\"Trang chủ\",\"Thông tin ra vào nhà\",\"Thông tin báo động\"],\"disable\":[\"Đăng nhập\",\"Đăng ký\"],\"show\":[\"Trang chủ\",\"Thông tin ra vào nhà\",\"Thông tin báo động\"],\"hide\":[\"Đăng nhập\",\"Đăng ký\"]}}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 640,
+        "y": 520,
+        "wires": [
+            [
+                "291a2b94d3bba97d"
+            ]
+        ]
+    },
+    {
+        "id": "f58e6b1e8760192a",
+        "type": "ui_toast",
+        "z": "0990983ab5514abd",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "Đăng ký thành công",
+        "name": "success",
+        "x": 340,
+        "y": 420,
+        "wires": [
+            [
+                "6fd8002654c5ac85"
+            ]
+        ]
+    },
+    {
+        "id": "986099a85a81a400",
+        "type": "change",
+        "z": "0990983ab5514abd",
+        "name": "to home",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"tab\":\"Trang chủ\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 620,
+        "y": 600,
+        "wires": [
+            [
+                "291a2b94d3bba97d"
+            ]
+        ]
+    },
+    {
+        "id": "6fd8002654c5ac85",
+        "type": "switch",
+        "z": "0990983ab5514abd",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "OK",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 410,
+        "y": 560,
+        "wires": [
+            [
+                "cd97d011df06bc14",
+                "986099a85a81a400"
+            ]
+        ]
+    },
+    {
+        "id": "80e3e616f1e654b4",
+        "type": "mongodb-aleph-in",
+        "z": "2c1eaf9dc12fdd42",
+        "mongodb": "9a2c46dd5e33ca0d",
+        "name": "find user db",
+        "collection": "userInfo",
+        "operation": "find",
+        "x": 510,
+        "y": 160,
+        "wires": [
+            [
+                "cb90f241fd709d34"
+            ]
+        ]
+    },
+    {
+        "id": "e8a735c8fb2bda86",
+        "type": "function",
+        "z": "2c1eaf9dc12fdd42",
+        "name": "find username",
+        "func": "msg.payload = { \"username\": msg.payload.username }\nreturn msg ",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 160,
+        "wires": [
+            [
+                "80e3e616f1e654b4"
+            ]
+        ]
+    },
+    {
+        "id": "f9d73015735bb61a",
+        "type": "join",
+        "z": "2c1eaf9dc12fdd42",
+        "name": "",
+        "mode": "custom",
+        "build": "object",
+        "property": "",
+        "propertyType": "full",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "useparts": false,
+        "accumulate": false,
+        "timeout": "",
+        "count": "2",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 850,
+        "y": 220,
+        "wires": [
+            [
+                "eaa1ea66249d2e48"
+            ]
+        ]
+    },
+    {
+        "id": "cb90f241fd709d34",
+        "type": "function",
+        "z": "2c1eaf9dc12fdd42",
+        "name": "real pass",
+        "func": "if (Array.isArray(msg.payload) && msg.payload.length > 0) {\n    const userData = msg.payload[0];\n\n    msg.payload = {\n        username: userData.username,\n        password: userData.password\n    };\n}\nmsg.topic = \"real\"\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 680,
+        "y": 160,
+        "wires": [
+            [
+                "f9d73015735bb61a"
+            ]
+        ]
+    },
+    {
+        "id": "ac6d5ca7a053c3e4",
+        "type": "function",
+        "z": "2c1eaf9dc12fdd42",
+        "name": "manual pass",
+        "func": "msg.payload = {\n    password: msg.payload.pass\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 260,
+        "wires": [
+            [
+                "f9d73015735bb61a"
+            ]
+        ]
+    },
+    {
+        "id": "eaa1ea66249d2e48",
+        "type": "function",
+        "z": "2c1eaf9dc12fdd42",
+        "name": "format",
+        "func": "const manualPayload = msg.payload.manual.payload;\nconst realPayload = msg.payload.real.payload;\n\nconst password_real = realPayload.password;\nconst username = realPayload.username;\nconst password_manual = manualPayload.password;\n\nmsg.payload = {\n    username: username,\n    password_real: password_real,\n    password_manual: password_manual\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 270,
+        "y": 420,
+        "wires": [
+            [
+                "7eac03c5fe0b6030"
+            ]
+        ]
+    },
+    {
+        "id": "7eac03c5fe0b6030",
+        "type": "function",
+        "z": "2c1eaf9dc12fdd42",
+        "name": "check password",
+        "func": "const bcrypt = global.get('bcryptjs');\n\nconst passwordManual = msg.payload.password_manual;\nconst passwordReal = msg.payload.password_real;\n\nconst isPasswordCorrect = bcrypt.compareSync(passwordManual, passwordReal);\n\nif (isPasswordCorrect) {\n    msg.payload = { status: \"success\", message: \"Đăng nhập thành công!\" };\n    return [null, msg];\n} else {\n    msg.payload = { status: \"error\", message: \"Mật khẩu sai!\" };\n    return [msg, null];\n}",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 420,
+        "wires": [
+            [
+                "a9a3cc960c238184"
+            ],
+            [
+                "43861229bc08b098"
+            ]
+        ]
+    },
+    {
+        "id": "859e7c07f41a6585",
+        "type": "ui_form",
+        "z": "2c1eaf9dc12fdd42",
+        "name": "Sign In",
+        "label": "",
+        "group": "aec9411f77430b30",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "Tên đăng nhập",
+                "value": "username",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Mật khẩu",
+                "value": "pass",
+                "type": "password",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "username": "",
+            "pass": ""
+        },
+        "payload": "",
+        "submit": "Đăng nhập",
+        "cancel": "",
+        "topic": "manual",
+        "topicType": "str",
+        "splitLayout": "",
+        "className": "",
+        "x": 120,
+        "y": 220,
+        "wires": [
+            [
+                "e8a735c8fb2bda86",
+                "ac6d5ca7a053c3e4"
+            ]
+        ]
+    },
+    {
+        "id": "773039a93b63c545",
+        "type": "ui_ui_control",
+        "z": "2c1eaf9dc12fdd42",
+        "name": "",
+        "events": "change",
+        "x": 800,
+        "y": 640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1b95650b48f7aca1",
+        "type": "change",
+        "z": "2c1eaf9dc12fdd42",
+        "name": "hide sign in/up",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"tabs\":{\"enable\":[\"Trang chủ\",\"Thông tin ra vào nhà\",\"Thông tin báo động\"],\"disable\":[\"Đăng nhập\",\"Đăng ký\"],\"show\":[\"Trang chủ\",\"Thông tin ra vào nhà\",\"Thông tin báo động\"],\"hide\":[\"Đăng nhập\",\"Đăng ký\"]}}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 620,
+        "y": 600,
+        "wires": [
+            [
+                "773039a93b63c545"
+            ]
+        ]
+    },
+    {
+        "id": "caccb60d2d016e3d",
+        "type": "ui_toast",
+        "z": "2c1eaf9dc12fdd42",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "Đăng nhập thành công",
+        "name": "success",
+        "x": 800,
+        "y": 460,
+        "wires": [
+            [
+                "53dd3e36ea7d42e7"
+            ]
+        ]
+    },
+    {
+        "id": "43861229bc08b098",
+        "type": "change",
+        "z": "2c1eaf9dc12fdd42",
+        "name": "noti",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Bấm \"OK\" để tiếp tục",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 650,
+        "y": 460,
+        "wires": [
+            [
+                "caccb60d2d016e3d"
+            ]
+        ]
+    },
+    {
+        "id": "7f01386bb6632dd8",
+        "type": "change",
+        "z": "2c1eaf9dc12fdd42",
+        "name": "to home",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"tab\":\"Trang chủ\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 600,
+        "y": 680,
+        "wires": [
+            [
+                "773039a93b63c545"
+            ]
+        ]
+    },
+    {
+        "id": "22b428563ce0b30d",
+        "type": "ui_toast",
+        "z": "2c1eaf9dc12fdd42",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "Đăng nhập thất bại",
+        "name": "wrong pass",
+        "x": 850,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a9a3cc960c238184",
+        "type": "change",
+        "z": "2c1eaf9dc12fdd42",
+        "name": "noti",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Tên đăng nhập hoặc mật khẩu sai",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 690,
+        "y": 360,
+        "wires": [
+            [
+                "22b428563ce0b30d"
+            ]
+        ]
+    },
+    {
+        "id": "e63949d0d15fa8e4",
+        "type": "ui_ui_control",
+        "z": "2c1eaf9dc12fdd42",
+        "name": "",
+        "events": "all",
+        "x": 780,
+        "y": 880,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d575fb3fb99deb15",
+        "type": "ui_button",
+        "z": "2c1eaf9dc12fdd42",
+        "name": "",
+        "group": "aec9411f77430b30",
+        "order": 0,
+        "width": "0",
+        "height": "0",
+        "passthru": false,
+        "label": "Đến đăng ký",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "forward",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 190,
+        "y": 880,
+        "wires": [
+            [
+                "7b53f60b46fe3712",
+                "7c02cb1c93c17d8f"
+            ]
+        ]
+    },
+    {
+        "id": "7b53f60b46fe3712",
+        "type": "change",
+        "z": "2c1eaf9dc12fdd42",
+        "name": "to sign up",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"tab\":\"Đăng ký\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 500,
+        "y": 840,
+        "wires": [
+            [
+                "e63949d0d15fa8e4"
+            ]
+        ]
+    },
+    {
+        "id": "7c02cb1c93c17d8f",
+        "type": "change",
+        "z": "2c1eaf9dc12fdd42",
+        "name": "hide other tabs (for sign UP only)",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"tabs\":{\"disable\":[\"Đăng nhập\",\"Trang chủ\",\"Thông tin ra vào nhà\",\"Thông tin báo động\"],\"enable\":[\"Đăng ký\"],\"hide\":[\"Đăng nhập\",\"Trang chủ\",\"Thông tin ra vào nhà\",\"Thông tin báo động\"],\"show\":[\"Đăng ký\"]}}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 500,
+        "y": 940,
+        "wires": [
+            [
+                "e63949d0d15fa8e4"
+            ]
+        ]
+    },
+    {
+        "id": "53dd3e36ea7d42e7",
+        "type": "switch",
+        "z": "2c1eaf9dc12fdd42",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "OK",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 390,
+        "y": 640,
+        "wires": [
+            [
+                "1b95650b48f7aca1",
+                "7f01386bb6632dd8"
+            ]
+        ]
+    },
+    {
+        "id": "8e50ae816147b350",
+        "type": "ui_slider",
+        "z": "c8bb26584d882317",
+        "name": "",
+        "label": "Thời gian nhận diện báo động (giây)",
+        "tooltip": "",
+        "group": "377cc0cd3327d171",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "end",
+        "topic": "",
+        "topicType": "str",
+        "min": "5",
+        "max": "90",
+        "step": 1,
+        "className": "",
+        "x": 410,
+        "y": 200,
+        "wires": [
+            [
+                "af7ac9544a028861"
+            ]
+        ]
+    },
+    {
+        "id": "693cb6ee92b8caf5",
+        "type": "ui_slider",
+        "z": "c8bb26584d882317",
+        "name": "",
+        "label": "Khoảng cách nhận diện (cm)",
+        "tooltip": "",
+        "group": "377cc0cd3327d171",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "end",
+        "topic": "payload",
+        "topicType": "msg",
+        "min": "5",
+        "max": "30",
+        "step": 1,
+        "className": "",
+        "x": 380,
+        "y": 280,
+        "wires": [
+            [
+                "e831adf610e98bda"
+            ]
+        ]
+    },
+    {
+        "id": "6cb42bb9c39f89e3",
+        "type": "ui_slider",
+        "z": "c8bb26584d882317",
+        "name": "",
+        "label": "Thời gian kéo dài báo động (giây)",
+        "tooltip": "",
+        "group": "377cc0cd3327d171",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "end",
+        "topic": "payload",
+        "topicType": "msg",
+        "min": "5",
+        "max": "30",
+        "step": 1,
+        "className": "",
+        "x": 400,
+        "y": 360,
+        "wires": [
+            [
+                "cb72da830e7c1e93"
+            ]
+        ]
+    },
+    {
+        "id": "af7ac9544a028861",
+        "type": "mqtt out",
+        "z": "c8bb26584d882317",
+        "name": "",
+        "topic": "/TimeThreshold",
+        "qos": "0",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "dab33a2dbe1780c4",
+        "x": 720,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "e831adf610e98bda",
+        "type": "mqtt out",
+        "z": "c8bb26584d882317",
+        "name": "",
+        "topic": "/DistanceThreshold",
+        "qos": "0",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "dab33a2dbe1780c4",
+        "x": 750,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "cb72da830e7c1e93",
+        "type": "mqtt out",
+        "z": "c8bb26584d882317",
+        "name": "",
+        "topic": "/TimeStopSpam",
+        "qos": "0",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "dab33a2dbe1780c4",
+        "x": 740,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "61de1cbd876a67f1",
+        "type": "ui_slider",
+        "z": "c8bb26584d882317",
+        "name": "",
+        "label": "Camera hoạt động lại sau: (giây)",
+        "tooltip": "",
+        "group": "377cc0cd3327d171",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "end",
+        "topic": "payload",
+        "topicType": "msg",
+        "min": "5",
+        "max": "20",
+        "step": 1,
+        "className": "",
+        "x": 390,
+        "y": 460,
+        "wires": [
+            [
+                "16557175e865b550"
+            ]
+        ]
+    },
+    {
+        "id": "16557175e865b550",
+        "type": "mqtt out",
+        "z": "c8bb26584d882317",
+        "name": "",
+        "topic": "/CameraResetTime",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "dab33a2dbe1780c4",
+        "x": 750,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "ac845d8c6cab67ad",
+        "type": "mongodb3 in",
+        "z": "10c96a1878fec2c8",
+        "service": "_ext_",
+        "configNode": "8258f05833dc3e66",
+        "name": "door insert",
+        "collection": "accessDoor",
+        "operation": "insert",
+        "x": 430,
+        "y": 520,
+        "wires": [
+            [
+                "cb68acd555a329f7"
+            ]
+        ]
+    },
+    {
+        "id": "3df4734602ac6623",
+        "type": "mongodb3 in",
+        "z": "10c96a1878fec2c8",
+        "service": "_ext_",
+        "configNode": "8258f05833dc3e66",
+        "name": "door import",
+        "collection": "accessDoor",
+        "operation": "aggregate.toArray",
+        "x": 670,
+        "y": 640,
+        "wires": [
+            [
+                "2580db8b85a0deb7"
+            ]
+        ]
+    },
+    {
+        "id": "cb68acd555a329f7",
+        "type": "function",
+        "z": "10c96a1878fec2c8",
+        "name": "renew table",
+        "func": "msg.payload = [\n    { $match: {} }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 640,
+        "wires": [
+            [
+                "3df4734602ac6623"
+            ]
+        ]
+    },
+    {
+        "id": "d3726609955652b5",
+        "type": "ui_table",
+        "z": "10c96a1878fec2c8",
+        "group": "589b625cad6c9ba0",
+        "name": "",
+        "order": 1,
+        "width": 25,
+        "height": "15",
+        "columns": [
+            {
+                "field": "ID",
+                "title": "ID",
+                "width": "",
+                "align": "center",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "Name",
+                "title": "Tên",
+                "width": "",
+                "align": "center",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "Date",
+                "title": "Ngày vào nhà",
+                "width": "",
+                "align": "center",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "Time",
+                "title": "Giờ vào nhà",
+                "width": "",
+                "align": "center",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "Image",
+                "title": "Hình ảnh",
+                "width": "",
+                "align": "center",
+                "formatter": "link",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            }
+        ],
+        "outputs": 0,
+        "cts": false,
+        "x": 930,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "2580db8b85a0deb7",
+        "type": "function",
+        "z": "10c96a1878fec2c8",
+        "name": "format table",
+        "func": "let data = msg.payload;\ndata = Object.values(data);\n\ndata = data.reverse();\n\ndata.forEach((item, index) => {\n    item.ID = index + 1;\n\n    if (item.image) {\n        item.image = item.image.replace(\"https://i.imgur.com/\", \"https://imgur.com/\").replace(\".jpeg\", \"\");\n    }\n});\n\nmsg.payload = data.map(item => ({\n    ID: item.ID,\n    Name: item.name || \"N/A\",\n    Date: item.date || \"N/A\",\n    Time: item.time || \"N/A\",\n    Image: item.image || \"N/A\"\n}));\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 730,
+        "y": 740,
+        "wires": [
+            [
+                "d3726609955652b5"
+            ]
+        ]
+    },
+    {
+        "id": "b31d93c33fa2c48b",
+        "type": "inject",
+        "z": "10c96a1878fec2c8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "0.5",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 190,
+        "y": 640,
+        "wires": [
+            [
+                "cb68acd555a329f7"
+            ]
+        ]
+    },
+    {
+        "id": "6745add2e35c2df7",
+        "type": "exec",
+        "z": "10c96a1878fec2c8",
+        "command": "python C:\\Users\\huygi\\Downloads\\VLCNTT\\final\\capture_image.py",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "capture face",
+        "x": 150,
+        "y": 240,
+        "wires": [
+            [
+                "6ace24f374f718b6"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "6ace24f374f718b6",
+        "type": "exec",
+        "z": "10c96a1878fec2c8",
+        "command": "python C:\\Users\\huygi\\Downloads\\VLCNTT\\final\\facenetv2.py",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "facenet",
+        "x": 360,
+        "y": 240,
+        "wires": [
+            [
+                "8bf1eebe787a37bb",
+                "6d87e4c36a4e7e31"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "584b2db05dec6ab0",
+        "type": "mqtt out",
+        "z": "10c96a1878fec2c8",
+        "name": "",
+        "topic": "/DoorOpen",
+        "qos": "0",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "dab33a2dbe1780c4",
+        "x": 770,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "8bf1eebe787a37bb",
+        "type": "function",
+        "z": "10c96a1878fec2c8",
+        "name": "to string name",
+        "func": "msg.payload = String(msg.payload).trim();\nlet parts = msg.payload.split('\\n');\nmsg.payload = String(parts[0].trim());\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 560,
+        "y": 220,
+        "wires": [
+            [
+                "584b2db05dec6ab0"
+            ]
+        ]
+    },
+    {
+        "id": "df0d5d020bc68aa6",
+        "type": "mqtt in",
+        "z": "10c96a1878fec2c8",
+        "name": "",
+        "topic": "/DoorOpenRequest",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "dab33a2dbe1780c4",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 150,
+        "y": 100,
+        "wires": [
+            [
+                "1373fa8b8e267f7f"
+            ]
+        ]
+    },
+    {
+        "id": "1373fa8b8e267f7f",
+        "type": "delay",
+        "z": "10c96a1878fec2c8",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "2",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 380,
+        "y": 100,
+        "wires": [
+            [
+                "6745add2e35c2df7"
+            ]
+        ]
+    },
+    {
+        "id": "5bdde37fe97c1497",
+        "type": "http request",
+        "z": "10c96a1878fec2c8",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://www.pushsafer.com/api?k=yLKLavCoZKOMYAu9ZB2E&m={{payload}}",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 750,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d630adc7d3a13fd5",
+        "type": "function",
+        "z": "10c96a1878fec2c8",
+        "name": "notification",
+        "func": "msg.payload = msg.payload.name + \" đã vào nhà vào \" + msg.payload.time + \", \" + msg.payload.date.replace(/\\//g, \"-\");\nmsg.topic = \"Thông báo có người vào nhà\"\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 440,
+        "wires": [
+            [
+                "5bdde37fe97c1497",
+                "b64f139499a63310"
+            ]
+        ]
+    },
+    {
+        "id": "b64f139499a63310",
+        "type": "e-mail",
+        "z": "10c96a1878fec2c8",
+        "server": "smtp.gmail.com",
+        "port": "465",
+        "authtype": "BASIC",
+        "saslformat": true,
+        "token": "oauth2Response.access_token",
+        "secure": true,
+        "tls": true,
+        "name": "huygigidokhongbiet@gmail.com",
+        "dname": "IoT-Door",
+        "x": 740,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "6d87e4c36a4e7e31",
+        "type": "function",
+        "z": "10c96a1878fec2c8",
+        "name": "to object",
+        "func": "let input = String(msg.payload).trim();\n\nlet parts = input.split('\\n');\n\nlet name = parts[0].trim();\nlet image = parts[1].trim();\n\nlet now = new Date();\nlet date = now.toLocaleDateString('vi-VN');\n\nlet hours = String(now.getHours()).padStart(2, '0');\nlet minutes = String(now.getMinutes()).padStart(2, '0');\n\nlet time = hours + ':' + minutes;\n\nmsg.payload = {\n    name: name,\n    image: image,\n    date: date,\n    time: time\n};\n\nif (msg.payload.name == \"Stranger\") {\n    return [msg, null];\n} else {\n    return [null, msg];\n}",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 260,
+        "y": 420,
+        "wires": [
+            [],
+            [
+                "ac845d8c6cab67ad",
+                "d630adc7d3a13fd5"
+            ]
+        ]
+    },
+    {
+        "id": "300a7a7d5e192f97",
+        "type": "mongodb3 in",
+        "z": "dbf42c02c6ce17b1",
+        "service": "_ext_",
+        "configNode": "8258f05833dc3e66",
+        "name": "security insert",
+        "collection": "securityAlert",
+        "operation": "insert",
+        "x": 620,
+        "y": 380,
+        "wires": [
+            [
+                "76b0cbb08b3279dd"
+            ]
+        ]
+    },
+    {
+        "id": "361b254e572db09e",
+        "type": "function",
+        "z": "dbf42c02c6ce17b1",
+        "name": "add date, time",
+        "func": "let data = msg.payload;\n\nlet now = new Date();\nlet date = now.toLocaleDateString('vi-VN');\n\nlet hours = String(now.getHours()).padStart(2, '0');\nlet minutes = String(now.getMinutes()).padStart(2, '0');\n\nlet time = hours + ':' + minutes;\n\ndata.date = date;\ndata.time = time;\n\nmsg.payload = data;\nmsg.topic = \"ultrasonic\"\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 140,
+        "wires": [
+            [
+                "2dad16f5bf8f2f61",
+                "df423413611f0417"
+            ]
+        ]
+    },
+    {
+        "id": "e9e1a3bb5b3c635a",
+        "type": "mongodb3 in",
+        "z": "dbf42c02c6ce17b1",
+        "service": "_ext_",
+        "configNode": "8258f05833dc3e66",
+        "name": "security import",
+        "collection": "securityAlert",
+        "operation": "aggregate.toArray",
+        "x": 620,
+        "y": 480,
+        "wires": [
+            [
+                "2222cc4c0d37dbe8"
+            ]
+        ]
+    },
+    {
+        "id": "76b0cbb08b3279dd",
+        "type": "function",
+        "z": "dbf42c02c6ce17b1",
+        "name": "renew table",
+        "func": "msg.payload = [\n    { $match: {} }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 480,
+        "wires": [
+            [
+                "e9e1a3bb5b3c635a"
+            ]
+        ]
+    },
+    {
+        "id": "2222cc4c0d37dbe8",
+        "type": "function",
+        "z": "dbf42c02c6ce17b1",
+        "name": "format table",
+        "func": "let data = msg.payload;\ndata = Object.values(data);\n\ndata = data.reverse();\n\ndata.forEach((item, index) => {\n    item.ID = index + 1;\n\n    if (item.image) {\n        item.image = item.image.replace(\"https://i.imgur.com/\", \"https://imgur.com/\").replace(\".jpeg\", \"\");\n    }\n});\n\nmsg.payload = data.map(item => ({\n    ID: item.ID,\n    Date: item.date || \"N/A\",\n    Time: item.time || \"N/A\",\n    Duration: item.duration || \"N/A\",\n    Image: item.image || \"N/A\"\n}));\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 750,
+        "y": 560,
+        "wires": [
+            [
+                "60bf26ad631d4a10"
+            ]
+        ]
+    },
+    {
+        "id": "60bf26ad631d4a10",
+        "type": "ui_table",
+        "z": "dbf42c02c6ce17b1",
+        "group": "e49c6940389da961",
+        "name": "",
+        "order": 1,
+        "width": 25,
+        "height": "15",
+        "columns": [
+            {
+                "field": "ID",
+                "title": "ID",
+                "width": "",
+                "align": "center",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "Date",
+                "title": "Ngày vào nhà",
+                "width": "",
+                "align": "center",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "Time",
+                "title": "Giờ vào nhà",
+                "width": "",
+                "align": "center",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "Duration",
+                "title": "Thời gian đứng (giây)",
+                "width": "",
+                "align": "center",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "Image",
+                "title": "Hình ảnh",
+                "width": "",
+                "align": "center",
+                "formatter": "link",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            }
+        ],
+        "outputs": 0,
+        "cts": false,
+        "x": 930,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "17d6897565764e6f",
+        "type": "inject",
+        "z": "dbf42c02c6ce17b1",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "0.5",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 170,
+        "y": 480,
+        "wires": [
+            [
+                "76b0cbb08b3279dd"
+            ]
+        ]
+    },
+    {
+        "id": "11d27822090617e7",
+        "type": "delay",
+        "z": "dbf42c02c6ce17b1",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "3",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 160,
+        "y": 200,
+        "wires": [
+            [
+                "361b254e572db09e",
+                "28fc3e9c0057dbda"
+            ]
+        ]
+    },
+    {
+        "id": "b788a8a641a07069",
+        "type": "mqtt in",
+        "z": "dbf42c02c6ce17b1",
+        "name": "",
+        "topic": "/IntruderTime",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "dab33a2dbe1780c4",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 110,
+        "y": 100,
+        "wires": [
+            [
+                "11d27822090617e7"
+            ]
+        ]
+    },
+    {
+        "id": "9ad83c54d4d115e9",
+        "type": "http request",
+        "z": "dbf42c02c6ce17b1",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://www.pushsafer.com/api?k=yLKLavCoZKOMYAu9ZB2E&m={{payload}}",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 830,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "df423413611f0417",
+        "type": "function",
+        "z": "dbf42c02c6ce17b1",
+        "name": "notification",
+        "func": "msg.payload = \"Có người đứng trước cửa trong \" + msg.payload.duration + \" giây, vào lúc \" + msg.payload.time + \", \" + msg.payload.date.replace(/\\//g, \"-\");\nmsg.topic = \"Cảnh báo có người đứng trước nhà\"\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 650,
+        "y": 80,
+        "wires": [
+            [
+                "9ad83c54d4d115e9",
+                "3abc461940e74725"
+            ]
+        ]
+    },
+    {
+        "id": "3abc461940e74725",
+        "type": "e-mail",
+        "z": "dbf42c02c6ce17b1",
+        "server": "smtp.gmail.com",
+        "port": "465",
+        "authtype": "BASIC",
+        "saslformat": true,
+        "token": "oauth2Response.access_token",
+        "secure": true,
+        "tls": true,
+        "name": "huygigidokhongbiet@gmail.com",
+        "dname": "IoT-Door",
+        "x": 840,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "28fc3e9c0057dbda",
+        "type": "exec",
+        "z": "dbf42c02c6ce17b1",
+        "command": "python C:\\Users\\huygi\\Downloads\\VLCNTT\\final\\capture_security.py",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "capture 1 img ",
+        "x": 360,
+        "y": 300,
+        "wires": [
+            [
+                "3edb37a2975471c3"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "2dad16f5bf8f2f61",
+        "type": "join",
+        "z": "dbf42c02c6ce17b1",
+        "name": "",
+        "mode": "custom",
+        "build": "object",
+        "property": "",
+        "propertyType": "full",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "useparts": false,
+        "accumulate": false,
+        "timeout": "",
+        "count": "2",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 670,
+        "y": 180,
+        "wires": [
+            [
+                "841e3fa6f9db93c8"
+            ]
+        ]
+    },
+    {
+        "id": "841e3fa6f9db93c8",
+        "type": "function",
+        "z": "dbf42c02c6ce17b1",
+        "name": "format payload",
+        "func": "msg.payload = {\n    duration: msg.payload.ultrasonic.payload.duration,\n    image: msg.payload.image.payload,\n    date: msg.payload.ultrasonic.payload.date,\n    time: msg.payload.ultrasonic.payload.time\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 780,
+        "y": 280,
+        "wires": [
+            [
+                "300a7a7d5e192f97"
+            ]
+        ]
+    },
+    {
+        "id": "3edb37a2975471c3",
+        "type": "function",
+        "z": "dbf42c02c6ce17b1",
+        "name": "set topic",
+        "func": "msg.payload = String(msg.payload).trim();\nmsg.topic = \"image\"\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 240,
+        "wires": [
+            [
+                "2dad16f5bf8f2f61"
+            ]
+        ]
+    }
+]
