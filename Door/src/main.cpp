@@ -19,6 +19,9 @@ int g_led_pin = 5;
 int r_led_pin = 18;
 int warn_led_pin = 19;
 
+// relay
+int relay_pin = 14;
+
 // parameters for security
 int thresholdSeconds = 10;
 int spamDurationSeconds = 5;
@@ -80,7 +83,7 @@ void callback(char* topic, byte* payload, unsigned int length)
     Serial.println(cameraResetTime);
   }
   else if (strcmp(topic, "/DoorOpen") == 0) {
-    if (payloadStr != "Stranger") {
+    if (payloadStr != "Stranger" && payloadStr != "") {
       openState = HIGH;
     }
     else {
@@ -128,7 +131,8 @@ long getDist() {
   return distCm;
 }
 
-void mode1() {
+void mode1(int delay_time) {
+  digitalWrite(relay_pin, HIGH);
   digitalWrite(g_led_pin, HIGH);
   tone(buz_pin, 800, 150);
   delay(200);
@@ -136,6 +140,10 @@ void mode1() {
   delay(200);
   tone(buz_pin, 1200, 150);
   delay(200);
+  delay(delay_time);
+  delay(200);
+  digitalWrite(relay_pin, LOW);
+  digitalWrite(g_led_pin, LOW);
 }
 
 void mode2() {
@@ -169,6 +177,8 @@ void setup() {
   pinMode(g_led_pin, OUTPUT);
   pinMode(r_led_pin, OUTPUT);
   pinMode(warn_led_pin, OUTPUT);
+  pinMode(relay_pin, OUTPUT);
+  digitalWrite(relay_pin, LOW);  // turn off relay initially
   Serial.println("Connecting to WiFi");
   wifiConnect();
   mqttClient.setServer(mqttServer, port);
@@ -196,13 +206,12 @@ void publishIntruderTime(unsigned long intrusionTime) {
   }
 }
 
-
 void loop() {
   if(!mqttClient.connected()) { 
     mqttConnect(); 
   }
-  mqttClient.loop();
-  
+  mqttClient.loop();  
+
   int reading = digitalRead(open_door_pin);
   int distCm = getDist();
   static unsigned long startTime = 0;
@@ -221,9 +230,12 @@ void loop() {
 
       if (requestOpenState == LOW) {
         digitalWrite(g_led_pin, HIGH);
+        
         tone(buz_pin, 800, 100);
+        
         publishDoorOpenRequest();
         delay(100);
+        
         digitalWrite(g_led_pin, LOW);
       }
     }
@@ -232,12 +244,10 @@ void loop() {
 
   // control verify case
   if (openState == HIGH) {
-    mode1();
+    mode1(cameraResetTime* 1000);
     counting = false;
     spamming = false;
-    delay(cameraResetTime * 1000);
     openState = LOW;
-    digitalWrite(g_led_pin, LOW);
   }
   else {
     if (distCm < thresholdDistance) {
@@ -264,6 +274,7 @@ void loop() {
             }
             spamming = false;
         } else {
+            
             mode3(distCm);
         }
     } else {
