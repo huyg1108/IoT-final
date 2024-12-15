@@ -1148,8 +1148,8 @@
         "type": "function",
         "z": "2c1eaf9dc12fdd42",
         "name": "real pass",
-        "func": "if (Array.isArray(msg.payload) && msg.payload.length > 0) {\n    const userData = msg.payload[0];\n\n    msg.payload = {\n        username: userData.username,\n        password: userData.password\n    };\n}\nmsg.topic = \"real\"\n\nreturn msg;",
-        "outputs": 1,
+        "func": "if (Array.isArray(msg.payload) && msg.payload.length > 0) {\n    // Khi có dữ liệu user\n    const userData = msg.payload[0];\n    msg.payload = {\n        username: userData.username,\n        password: userData.password\n    };\n    msg.topic = \"real\";\n    return [null, msg];\n} else {\n    // Khi không có dữ liệu user\n    msg.payload = \"User does not exist\";\n    msg.topic = \"error\";\n    return [msg, null];\n}",
+        "outputs": 2,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
@@ -1158,6 +1158,9 @@
         "x": 680,
         "y": 160,
         "wires": [
+            [
+                "e90761b23bbd07f7"
+            ],
             [
                 "f9d73015735bb61a"
             ]
@@ -1722,6 +1725,54 @@
         "wires": [
             [
                 "e63949d0d15fa8e4"
+            ]
+        ]
+    },
+    {
+        "id": "61df8768c71f1f4d",
+        "type": "ui_toast",
+        "z": "2c1eaf9dc12fdd42",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "Đăng nhập thất bại",
+        "name": "wrong pass",
+        "x": 990,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e90761b23bbd07f7",
+        "type": "change",
+        "z": "2c1eaf9dc12fdd42",
+        "name": "noti",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Tên đăng nhập hoặc mật khẩu sai",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 830,
+        "y": 100,
+        "wires": [
+            [
+                "61df8768c71f1f4d"
             ]
         ]
     },
@@ -2364,7 +2415,7 @@
         "type": "function",
         "z": "10c96a1878fec2c8",
         "name": "to object",
-        "func": "let input = String(msg.payload).trim();\n\nlet parts = input.split('\\n');\n\nlet name = parts[0].trim();\nlet image = parts[1].trim();\n\nlet now = new Date();\nlet date = now.toLocaleDateString('vi-VN');\n\nlet hours = String(now.getHours()).padStart(2, '0');\nlet minutes = String(now.getMinutes()).padStart(2, '0');\n\nlet time = hours + ':' + minutes;\n\nmsg.payload = {\n    name: name,\n    image: image,\n    date: date,\n    time: time\n};\n\nif (msg.payload.name == \"Stranger\") {\n    return [msg, null];\n} else {\n    return [null, msg];\n}",
+        "func": "if (msg.payload == \"\") {\n    return [msg, null];\n}\n\nlet input = String(msg.payload).trim();\n\nlet parts = input.split('\\n');\n\nlet name = parts[0].trim();\nlet image = parts[1].trim();\n\nlet now = new Date();\nlet date = now.toLocaleDateString('vi-VN');\n\nlet hours = String(now.getHours()).padStart(2, '0');\nlet minutes = String(now.getMinutes()).padStart(2, '0');\n\nlet time = hours + ':' + minutes;\n\nmsg.payload = {\n    name: name,\n    image: image,\n    date: date,\n    time: time\n};\n\nif (msg.payload.name == \"Stranger\") {\n    return [msg, null];\n} else {\n    return [null, msg];\n}",
         "outputs": 2,
         "timeout": 0,
         "noerr": 0,
