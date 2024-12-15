@@ -140,7 +140,7 @@
         "id": "44aaf43923752d7c",
         "type": "ui_tab",
         "name": "Trang chủ",
-        "icon": "dashboard",
+        "icon": "home",
         "order": 3,
         "disabled": false,
         "hidden": false
@@ -168,7 +168,7 @@
         "id": "05f621574fa472ae",
         "type": "ui_tab",
         "name": "Thông tin ra vào nhà",
-        "icon": "dashboard",
+        "icon": "verified_user",
         "order": 4,
         "disabled": false,
         "hidden": false
@@ -188,7 +188,7 @@
         "id": "bddf7e598d8c044e",
         "type": "ui_tab",
         "name": "Thông tin báo động",
-        "icon": "dashboard",
+        "icon": "fa-exclamation-triangle",
         "order": 5,
         "disabled": false,
         "hidden": false
@@ -239,7 +239,7 @@
         "id": "68b2c20de5da7e3f",
         "type": "ui_tab",
         "name": "Đăng ký",
-        "icon": "dashboard",
+        "icon": "assignment_turned_in",
         "order": 1,
         "disabled": false,
         "hidden": false
@@ -259,7 +259,7 @@
         "id": "a972a1d450bc07ed",
         "type": "ui_tab",
         "name": "Đăng nhập",
-        "icon": "dashboard",
+        "icon": "login",
         "order": 2,
         "disabled": false,
         "hidden": false
@@ -284,6 +284,17 @@
         "port": "27017",
         "db": "test",
         "name": "iot-door db"
+    },
+    {
+        "id": "3d0d06fd46dc4072",
+        "type": "ui_group",
+        "name": "To home",
+        "tab": "68b2c20de5da7e3f",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
     },
     {
         "id": "754b63f6b4900b4f",
@@ -532,74 +543,6 @@
         ]
     },
     {
-        "id": "aedc1932b5bd2ff3",
-        "type": "change",
-        "z": "0990983ab5514abd",
-        "name": "hide sign in/up",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{\"tabs\":{\"enable\":[\"Trang chủ\",\"Thông tin ra vào nhà\",\"Thông tin báo động\"],\"disable\":[\"Đăng nhập\",\"Đăng ký\"],\"show\":[\"Trang chủ\",\"Thông tin ra vào nhà\",\"Thông tin báo động\"],\"hide\":[\"Đăng nhập\",\"Đăng ký\"]}}",
-                "tot": "json"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 340,
-        "y": 980,
-        "wires": [
-            [
-                "3c32f04ee759b694"
-            ]
-        ]
-    },
-    {
-        "id": "8d21eda0a9f99277",
-        "type": "inject",
-        "z": "0990983ab5514abd",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 100,
-        "y": 980,
-        "wires": [
-            [
-                "aedc1932b5bd2ff3"
-            ]
-        ]
-    },
-    {
-        "id": "3c32f04ee759b694",
-        "type": "ui_ui_control",
-        "z": "0990983ab5514abd",
-        "name": "",
-        "events": "all",
-        "x": 600,
-        "y": 980,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "13acd336b167afad",
         "type": "change",
         "z": "0990983ab5514abd",
@@ -609,7 +552,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "{\"tabs\":{\"disable\":[\"Đăng nhập\",\"Trang chủ\",\"Thông tin ra vào nhà\",\"Thông tin báo động\"],\"enable\":[\"Đăng ký\"],\"hide\":[\"Đăng nhập\",\"Trang chủ\",\"Thông tin ra vào nhà\",\"Thông tin báo động\"],\"show\":[\"Đăng ký\"]}}",
+                "to": "{\"tabs\":{\"disable\":[\"Đăng nhập\",\"Trang chủ\",\"Thông tin ra vào nhà\",\"Thông tin báo động\"],\"enable\":[\"Đăng ký\"],\"hide\":[\"Đăng nhập\",\"Trang chủ\",\"Thông tin ra vào nhà\",\"Thông tin báo động\"],\"show\":[\"Đăng ký\"]},\"group\":{\"hide\":[\"Đăng_nhập_Đăng_nhập\",\"Trang_chủ_Config\",\"Thông_tin_ra_vào_nhà_Table\",\"Thông_tin_báo_động_Table\",\"Đăng_ký_To_home\"],\"show\":[\"Đăng_ký_Đăng_ký\"]}}",
                 "tot": "json"
             }
         ],
@@ -637,10 +580,10 @@
                 "vt": "str"
             }
         ],
-        "repeat": "",
+        "repeat": "1800",
         "crontab": "",
         "once": true,
-        "onceDelay": 0.1,
+        "onceDelay": "0.5",
         "topic": "",
         "x": 120,
         "y": 660,
@@ -656,39 +599,10 @@
         "z": "0990983ab5514abd",
         "name": "",
         "events": "all",
-        "x": 660,
+        "x": 680,
         "y": 660,
         "wires": [
             []
-        ]
-    },
-    {
-        "id": "d4b9b79e8dccd8d7",
-        "type": "inject",
-        "z": "0990983ab5514abd",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 120,
-        "y": 720,
-        "wires": [
-            [
-                "13acd336b167afad"
-            ]
         ]
     },
     {
@@ -701,7 +615,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "{\"tabs\":{\"disable\":[\"Đăng ký\",\"Trang chủ\",\"Thông tin ra vào nhà\",\"Thông tin báo động\"],\"enable\":[\"Đăng nhập\"],\"hide\":[\"Đăng ký\",\"Trang chủ\",\"Thông tin ra vào nhà\",\"Thông tin báo động\"],\"show\":[\"Đăng nhập\"]}}",
+                "to": "{\"tabs\":{\"disable\":[\"Đăng ký\",\"Trang chủ\",\"Thông tin ra vào nhà\",\"Thông tin báo động\"],\"enable\":[\"Đăng nhập\"],\"hide\":[\"Đăng ký\",\"Trang chủ\",\"Thông tin ra vào nhà\",\"Thông tin báo động\"],\"show\":[\"Đăng nhập\"]},\"group\":{\"hide\":[\"Đăng_ký_Đăng_ký\",\"Trang_chủ_Config\",\"Thông_tin_ra_vào_nhà_Table\",\"Thông_tin_báo_động_Table\",\"Đăng_ký_To_home\"],\"show\":[\"Đăng_nhập_Đăng_nhập\"]}}",
                 "tot": "json"
             }
         ],
@@ -711,7 +625,7 @@
         "to": "",
         "reg": false,
         "x": 430,
-        "y": 860,
+        "y": 820,
         "wires": [
             [
                 "dbd5c459bcb3f87e"
@@ -725,7 +639,7 @@
         "name": "",
         "events": "all",
         "x": 660,
-        "y": 800,
+        "y": 760,
         "wires": [
             []
         ]
@@ -745,13 +659,13 @@
         "color": "",
         "bgcolor": "",
         "className": "",
-        "icon": "forward",
+        "icon": "login",
         "payload": "",
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
         "x": 100,
-        "y": 800,
+        "y": 760,
         "wires": [
             [
                 "3a0e86373e43d864",
@@ -779,7 +693,7 @@
         "to": "",
         "reg": false,
         "x": 420,
-        "y": 760,
+        "y": 720,
         "wires": [
             [
                 "dbd5c459bcb3f87e"
@@ -791,7 +705,7 @@
         "type": "ui_ui_control",
         "z": "0990983ab5514abd",
         "name": "",
-        "events": "change",
+        "events": "all",
         "x": 820,
         "y": 560,
         "wires": [
@@ -808,7 +722,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "{\"tabs\":{\"enable\":[\"Trang chủ\",\"Thông tin ra vào nhà\",\"Thông tin báo động\"],\"disable\":[\"Đăng nhập\",\"Đăng ký\"],\"show\":[\"Trang chủ\",\"Thông tin ra vào nhà\",\"Thông tin báo động\"],\"hide\":[\"Đăng nhập\",\"Đăng ký\"]}}",
+                "to": "{\"tabs\":{\"enable\":[\"Trang chủ\",\"Thông tin ra vào nhà\",\"Thông tin báo động\"],\"disable\":[\"Đăng nhập\",\"Đăng ký\"],\"show\":[\"Trang chủ\",\"Thông tin ra vào nhà\",\"Thông tin báo động\"],\"hide\":[\"Đăng nhập\",\"Đăng ký\"]},\"group\":{\"show\":[\"Trang_chủ_Config\",\"Thông_tin_ra_vào_nhà_Table\",\"Thông_tin_báo_động_Table\",\"Đăng_ký_To_home\"],\"hide\":[\"Đăng_nhập_Đăng_nhập\",\"Đăng_ký_Đăng_ký\"]}}",
                 "tot": "json"
             }
         ],
@@ -899,6 +813,73 @@
                 "cd97d011df06bc14",
                 "986099a85a81a400"
             ]
+        ]
+    },
+    {
+        "id": "facf6e4db1e539ac",
+        "type": "ui_button",
+        "z": "0990983ab5514abd",
+        "name": "",
+        "group": "3d0d06fd46dc4072",
+        "order": 0,
+        "width": "0",
+        "height": "0",
+        "passthru": false,
+        "label": "Đến trang chủ",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "forward",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 100,
+        "y": 900,
+        "wires": [
+            [
+                "817557b64b045970"
+            ]
+        ]
+    },
+    {
+        "id": "817557b64b045970",
+        "type": "change",
+        "z": "0990983ab5514abd",
+        "name": "to home",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"tab\":\"Trang chủ\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 340,
+        "y": 900,
+        "wires": [
+            [
+                "6dc08eeced5c9221"
+            ]
+        ]
+    },
+    {
+        "id": "6dc08eeced5c9221",
+        "type": "ui_ui_control",
+        "z": "0990983ab5514abd",
+        "name": "",
+        "events": "all",
+        "x": 540,
+        "y": 900,
+        "wires": [
+            []
         ]
     },
     {
@@ -1100,38 +1081,11 @@
         "type": "ui_ui_control",
         "z": "2c1eaf9dc12fdd42",
         "name": "",
-        "events": "change",
+        "events": "all",
         "x": 800,
         "y": 640,
         "wires": [
             []
-        ]
-    },
-    {
-        "id": "1b95650b48f7aca1",
-        "type": "change",
-        "z": "2c1eaf9dc12fdd42",
-        "name": "hide sign in/up",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{\"tabs\":{\"enable\":[\"Trang chủ\",\"Thông tin ra vào nhà\",\"Thông tin báo động\"],\"disable\":[\"Đăng nhập\",\"Đăng ký\"],\"show\":[\"Trang chủ\",\"Thông tin ra vào nhà\",\"Thông tin báo động\"],\"hide\":[\"Đăng nhập\",\"Đăng ký\"]}}",
-                "tot": "json"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 620,
-        "y": 600,
-        "wires": [
-            [
-                "773039a93b63c545"
-            ]
         ]
     },
     {
@@ -1181,33 +1135,6 @@
         "wires": [
             [
                 "caccb60d2d016e3d"
-            ]
-        ]
-    },
-    {
-        "id": "7f01386bb6632dd8",
-        "type": "change",
-        "z": "2c1eaf9dc12fdd42",
-        "name": "to home",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{\"tab\":\"Trang chủ\"}",
-                "tot": "json"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 600,
-        "y": 680,
-        "wires": [
-            [
-                "773039a93b63c545"
             ]
         ]
     },
@@ -1296,7 +1223,7 @@
         "wires": [
             [
                 "7b53f60b46fe3712",
-                "7c02cb1c93c17d8f"
+                "d165c2bd98daab4c"
             ]
         ]
     },
@@ -1328,33 +1255,6 @@
         ]
     },
     {
-        "id": "7c02cb1c93c17d8f",
-        "type": "change",
-        "z": "2c1eaf9dc12fdd42",
-        "name": "hide other tabs (for sign UP only)",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{\"tabs\":{\"disable\":[\"Đăng nhập\",\"Trang chủ\",\"Thông tin ra vào nhà\",\"Thông tin báo động\"],\"enable\":[\"Đăng ký\"],\"hide\":[\"Đăng nhập\",\"Trang chủ\",\"Thông tin ra vào nhà\",\"Thông tin báo động\"],\"show\":[\"Đăng ký\"]}}",
-                "tot": "json"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 500,
-        "y": 940,
-        "wires": [
-            [
-                "e63949d0d15fa8e4"
-            ]
-        ]
-    },
-    {
         "id": "53dd3e36ea7d42e7",
         "type": "switch",
         "z": "2c1eaf9dc12fdd42",
@@ -1375,8 +1275,89 @@
         "y": 640,
         "wires": [
             [
-                "1b95650b48f7aca1",
-                "7f01386bb6632dd8"
+                "670ed8414759fae4",
+                "8b448e9c2b339343"
+            ]
+        ]
+    },
+    {
+        "id": "d165c2bd98daab4c",
+        "type": "change",
+        "z": "2c1eaf9dc12fdd42",
+        "name": "hide other tabs (for sign UP only)",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"tabs\":{\"disable\":[\"Đăng nhập\",\"Trang chủ\",\"Thông tin ra vào nhà\",\"Thông tin báo động\"],\"enable\":[\"Đăng ký\"],\"hide\":[\"Đăng nhập\",\"Trang chủ\",\"Thông tin ra vào nhà\",\"Thông tin báo động\"],\"show\":[\"Đăng ký\"]},\"group\":{\"hide\":[\"Đăng_nhập_Đăng_nhập\",\"Trang_chủ_Config\",\"Thông_tin_ra_vào_nhà_Table\",\"Thông_tin_báo_động_Table\",\"Đăng_ký_To_home\"],\"show\":[\"Đăng_ký_Đăng_ký\"]}}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 500,
+        "y": 940,
+        "wires": [
+            [
+                "e63949d0d15fa8e4"
+            ]
+        ]
+    },
+    {
+        "id": "670ed8414759fae4",
+        "type": "change",
+        "z": "2c1eaf9dc12fdd42",
+        "name": "hide sign in/up",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"tabs\":{\"enable\":[\"Trang chủ\",\"Thông tin ra vào nhà\",\"Thông tin báo động\"],\"disable\":[\"Đăng nhập\",\"Đăng ký\"],\"show\":[\"Trang chủ\",\"Thông tin ra vào nhà\",\"Thông tin báo động\"],\"hide\":[\"Đăng nhập\",\"Đăng ký\"]},\"group\":{\"show\":[\"Trang_chủ_Config\",\"Thông_tin_ra_vào_nhà_Table\",\"Thông_tin_báo_động_Table\",\"Đăng_ký_To_home\"],\"hide\":[\"Đăng_nhập_Đăng_nhập\",\"Đăng_ký_Đăng_ký\"]}}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 600,
+        "y": 600,
+        "wires": [
+            [
+                "773039a93b63c545"
+            ]
+        ]
+    },
+    {
+        "id": "8b448e9c2b339343",
+        "type": "change",
+        "z": "2c1eaf9dc12fdd42",
+        "name": "to home",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"tab\":\"Trang chủ\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 580,
+        "y": 700,
+        "wires": [
+            [
+                "773039a93b63c545"
             ]
         ]
     },
@@ -1559,6 +1540,73 @@
         "x": 750,
         "y": 460,
         "wires": []
+    },
+    {
+        "id": "b23c247afbaa5a5b",
+        "type": "change",
+        "z": "c8bb26584d882317",
+        "name": "hide other tabs (for sign UP only)",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"tabs\":{\"disable\":[\"Đăng nhập\",\"Trang chủ\",\"Thông tin ra vào nhà\",\"Thông tin báo động\"],\"enable\":[\"Đăng ký\"],\"hide\":[\"Đăng nhập\",\"Trang chủ\",\"Thông tin ra vào nhà\",\"Thông tin báo động\"],\"show\":[\"Đăng ký\"]},\"group\":{\"hide\":[\"Đăng_nhập_Đăng_nhập\",\"Trang_chủ_Config\",\"Thông_tin_ra_vào_nhà_Table\",\"Thông_tin_báo_động_Table\",\"Đăng_ký_To_home\"],\"show\":[\"Đăng_ký_Đăng_ký\"]}}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 480,
+        "y": 600,
+        "wires": [
+            [
+                "8c30f1524e435d2d"
+            ]
+        ]
+    },
+    {
+        "id": "8c30f1524e435d2d",
+        "type": "ui_ui_control",
+        "z": "c8bb26584d882317",
+        "name": "",
+        "events": "all",
+        "x": 760,
+        "y": 600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8b598706301cda44",
+        "type": "ui_button",
+        "z": "c8bb26584d882317",
+        "name": "",
+        "group": "377cc0cd3327d171",
+        "order": 0,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "label": "Đăng xuất",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "logout",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 190,
+        "y": 600,
+        "wires": [
+            [
+                "b23c247afbaa5a5b"
+            ]
+        ]
     },
     {
         "id": "ac845d8c6cab67ad",
@@ -1938,6 +1986,73 @@
             [
                 "ac845d8c6cab67ad",
                 "d630adc7d3a13fd5"
+            ]
+        ]
+    },
+    {
+        "id": "aa3d7dab5b8773ad",
+        "type": "change",
+        "z": "10c96a1878fec2c8",
+        "name": "hide other tabs (for sign UP only)",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"tabs\":{\"disable\":[\"Đăng nhập\",\"Trang chủ\",\"Thông tin ra vào nhà\",\"Thông tin báo động\"],\"enable\":[\"Đăng ký\"],\"hide\":[\"Đăng nhập\",\"Trang chủ\",\"Thông tin ra vào nhà\",\"Thông tin báo động\"],\"show\":[\"Đăng ký\"]},\"group\":{\"hide\":[\"Đăng_nhập_Đăng_nhập\",\"Trang_chủ_Config\",\"Thông_tin_ra_vào_nhà_Table\",\"Thông_tin_báo_động_Table\",\"Đăng_ký_To_home\"],\"show\":[\"Đăng_ký_Đăng_ký\"]}}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 460,
+        "y": 820,
+        "wires": [
+            [
+                "800d6a1fb11d7fdb"
+            ]
+        ]
+    },
+    {
+        "id": "800d6a1fb11d7fdb",
+        "type": "ui_ui_control",
+        "z": "10c96a1878fec2c8",
+        "name": "",
+        "events": "all",
+        "x": 740,
+        "y": 820,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4a5ba476131791a1",
+        "type": "ui_button",
+        "z": "10c96a1878fec2c8",
+        "name": "",
+        "group": "589b625cad6c9ba0",
+        "order": 0,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "label": "Đăng xuất",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "logout",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 170,
+        "y": 820,
+        "wires": [
+            [
+                "aa3d7dab5b8773ad"
             ]
         ]
     },
@@ -2327,6 +2442,73 @@
         "wires": [
             [
                 "2dad16f5bf8f2f61"
+            ]
+        ]
+    },
+    {
+        "id": "f0bb5b67a4215f2e",
+        "type": "change",
+        "z": "dbf42c02c6ce17b1",
+        "name": "hide other tabs (for sign UP only)",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"tabs\":{\"disable\":[\"Đăng nhập\",\"Trang chủ\",\"Thông tin ra vào nhà\",\"Thông tin báo động\"],\"enable\":[\"Đăng ký\"],\"hide\":[\"Đăng nhập\",\"Trang chủ\",\"Thông tin ra vào nhà\",\"Thông tin báo động\"],\"show\":[\"Đăng ký\"]},\"group\":{\"hide\":[\"Đăng_nhập_Đăng_nhập\",\"Trang_chủ_Config\",\"Thông_tin_ra_vào_nhà_Table\",\"Thông_tin_báo_động_Table\",\"Đăng_ký_To_home\"],\"show\":[\"Đăng_ký_Đăng_ký\"]}}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 440,
+        "y": 660,
+        "wires": [
+            [
+                "884700e4f772b714"
+            ]
+        ]
+    },
+    {
+        "id": "884700e4f772b714",
+        "type": "ui_ui_control",
+        "z": "dbf42c02c6ce17b1",
+        "name": "",
+        "events": "all",
+        "x": 720,
+        "y": 660,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5b128b161da85dd7",
+        "type": "ui_button",
+        "z": "dbf42c02c6ce17b1",
+        "name": "",
+        "group": "e49c6940389da961",
+        "order": 0,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "label": "Đăng xuất",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "logout",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 150,
+        "y": 660,
+        "wires": [
+            [
+                "f0bb5b67a4215f2e"
             ]
         ]
     }
