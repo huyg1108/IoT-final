@@ -170,7 +170,7 @@ void setup() {
   Serial.begin(115200);
   esp_log_level_set("ledc", ESP_LOG_NONE);
 
-  // pinMode(button_pin, INPUT);
+  pinMode(open_door_pin, INPUT);
   pinMode(trig_pin, OUTPUT);
   pinMode(echo_pin, INPUT);
   pinMode(buz_pin, OUTPUT);
